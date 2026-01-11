@@ -642,15 +642,26 @@ const Index = () => {
         </div>
       </section>
 
-      <a
-        href="https://wa.me/79251234567?text=Здравствуйте!%20Интересует%20покупка%20автомобиля"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full p-4 shadow-2xl transition-all hover:scale-110 animate-fade-in"
-        aria-label="Написать в WhatsApp"
-      >
-        <Icon name="MessageCircle" size={28} />
-      </a>
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a
+          href="https://t.me/username"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#0088cc] hover:bg-[#0077b3] text-white rounded-full p-4 shadow-2xl transition-all hover:scale-110 animate-fade-in"
+          aria-label="Написать в Telegram"
+        >
+          <Icon name="Send" size={28} />
+        </a>
+        <a
+          href="https://wa.me/79251234567?text=Здравствуйте!%20Интересует%20покупка%20автомобиля"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full p-4 shadow-2xl transition-all hover:scale-110 animate-fade-in"
+          aria-label="Написать в WhatsApp"
+        >
+          <Icon name="MessageCircle" size={28} />
+        </a>
+      </div>
 
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4">
