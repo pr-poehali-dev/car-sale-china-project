@@ -119,11 +119,16 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="hero" className="pt-24 pb-16 bg-gradient-to-br from-black via-secondary to-black text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section id="hero" className="pt-24 pb-16 bg-gradient-to-br from-black via-secondary to-black text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-foreground to-transparent"></div>
+          <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <Badge className="mb-4 bg-accent text-accent-foreground">Прямые поставки</Badge>
+              <Badge className="mb-4 bg-accent text-accent-foreground shadow-lg shadow-accent/50">Прямые поставки</Badge>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 Китайские автомобили со скидкой до 40%
               </h1>
@@ -131,7 +136,7 @@ const Index = () => {
                 Официальная гарантия производителя. Доставка из Китая. Полное сервисное обслуживание.
               </p>
               <div className="flex gap-4">
-                <Button size="lg" className="bg-accent hover:bg-accent/90" onClick={() => scrollToSection('catalog')}>
+                <Button size="lg" className="bg-accent hover:bg-accent/90 shadow-lg shadow-accent/30" onClick={() => scrollToSection('catalog')}>
                   Выбрать автомобиль
                 </Button>
                 <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
@@ -140,10 +145,11 @@ const Index = () => {
               </div>
             </div>
             <div className="relative animate-fade-in">
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary-foreground/20 rounded-lg blur-2xl"></div>
               <img 
                 src="https://cdn.poehali.dev/projects/9937d48e-e570-449f-9762-9ea3421272c7/files/f4d32304-4053-4149-81ff-730772e48322.jpg" 
                 alt="Китайские автомобили" 
-                className="rounded-lg shadow-2xl"
+                className="rounded-lg shadow-2xl relative z-10 border border-primary-foreground/10"
               />
             </div>
           </div>
