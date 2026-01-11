@@ -119,7 +119,6 @@ const Index = () => {
               <button onClick={() => scrollToSection('hero')} className="hover:text-accent transition-colors">Главная</button>
               <button onClick={() => scrollToSection('catalog')} className="hover:text-accent transition-colors">Каталог</button>
               <button onClick={() => scrollToSection('about')} className="hover:text-accent transition-colors">О компании</button>
-              <button onClick={() => scrollToSection('offers')} className="hover:text-accent transition-colors">Спецпредложения</button>
               <button onClick={() => scrollToSection('contacts')} className="hover:text-accent transition-colors">Контакты</button>
             </div>
             <div className="flex items-center gap-4">
@@ -154,12 +153,6 @@ const Index = () => {
                 className="block w-full text-left py-2 hover:text-accent transition-colors"
               >
                 О компании
-              </button>
-              <button 
-                onClick={() => scrollToSection('offers')} 
-                className="block w-full text-left py-2 hover:text-accent transition-colors"
-              >
-                Спецпредложения
               </button>
               <button 
                 onClick={() => scrollToSection('contacts')} 
@@ -349,57 +342,6 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="offers" className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">Специальные предложения</h2>
-          <p className="text-center text-muted-foreground mb-12">Акции и выгодные условия</p>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 border-accent">
-              <CardHeader>
-                <Icon name="Gift" size={40} className="text-accent mb-2" />
-                <CardTitle>Трейд-ин</CardTitle>
-                <CardDescription>Обмен старого авто на новое</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Оцениваем ваш автомобиль по рыночной стоимости и засчитываем в оплату нового.
-                </p>
-                <Button variant="outline" className="w-full">Узнать стоимость</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-accent">
-              <CardHeader>
-                <Icon name="CreditCard" size={40} className="text-accent mb-2" />
-                <CardTitle>Кредит 0%</CardTitle>
-                <CardDescription>Первый год без процентов</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Специальная программа кредитования с нулевой ставкой на первые 12 месяцев.
-                </p>
-                <Button variant="outline" className="w-full">Рассчитать</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-accent">
-              <CardHeader>
-                <Icon name="Users" size={40} className="text-accent mb-2" />
-                <CardTitle>Программа лояльности</CardTitle>
-                <CardDescription>Скидки для постоянных клиентов</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Дополнительная скидка 5% при повторной покупке или покупке для друга.
-                </p>
-                <Button variant="outline" className="w-full">Подробнее</Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -677,7 +619,6 @@ const Index = () => {
               <div className="space-y-2">
                 <button onClick={() => scrollToSection('catalog')} className="block hover:text-accent transition-colors">Каталог</button>
                 <button onClick={() => scrollToSection('about')} className="block hover:text-accent transition-colors">О компании</button>
-                <button onClick={() => scrollToSection('offers')} className="block hover:text-accent transition-colors">Спецпредложения</button>
                 <button onClick={() => scrollToSection('contacts')} className="block hover:text-accent transition-colors">Контакты</button>
               </div>
             </div>
