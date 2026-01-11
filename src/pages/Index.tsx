@@ -119,7 +119,7 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="hero" className="pt-24 pb-16 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
+      <section id="hero" className="pt-24 pb-16 bg-gradient-to-br from-black via-secondary to-black text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
