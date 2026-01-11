@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -91,6 +91,15 @@ const cars: Car[] = [
 const Index = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -120,14 +129,20 @@ const Index = () => {
       </nav>
 
       <section id="hero" className="pt-24 pb-16 bg-gradient-to-br from-black via-secondary to-black text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+        <div 
+          className="absolute inset-0 opacity-20 transition-transform duration-300"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
           <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent"></div>
           <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-foreground to-transparent"></div>
           <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
+            <div 
+              className="animate-fade-in"
+              style={{ transform: `translateY(${scrollY * -0.1}px)`, transition: 'transform 0.3s ease-out' }}
+            >
               <Badge className="mb-4 bg-accent text-accent-foreground shadow-lg shadow-accent/50">Прямые поставки</Badge>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 Китайские автомобили со скидкой до 40%
@@ -144,7 +159,10 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative animate-fade-in">
+            <div 
+              className="relative animate-fade-in"
+              style={{ transform: `translateY(${scrollY * 0.15}px)`, transition: 'transform 0.3s ease-out' }}
+            >
               <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary-foreground/20 rounded-lg blur-2xl"></div>
               <img 
                 src="https://cdn.poehali.dev/projects/9937d48e-e570-449f-9762-9ea3421272c7/files/f4d32304-4053-4149-81ff-730772e48322.jpg" 
