@@ -176,6 +176,24 @@ const Index = () => {
 
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-16">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-accent mb-2">500+</div>
+              <p className="text-muted-foreground">Довольных клиентов</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-accent mb-2">7</div>
+              <p className="text-muted-foreground">Моделей в наличии</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-accent mb-2">40%</div>
+              <p className="text-muted-foreground">Максимальная скидка</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-accent mb-2">5+</div>
+              <p className="text-muted-foreground">Лет опыта</p>
+            </div>
+          </div>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-in">
               <Icon name="Shield" size={48} className="mx-auto mb-4 text-accent" />
