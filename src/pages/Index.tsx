@@ -642,6 +642,16 @@ const Index = () => {
         </div>
       </section>
 
+      <a
+        href="https://wa.me/79251234567?text=Здравствуйте!%20Интересует%20покупка%20автомобиля"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full p-4 shadow-2xl transition-all hover:scale-110 animate-fade-in"
+        aria-label="Написать в WhatsApp"
+      >
+        <Icon name="MessageCircle" size={28} />
+      </a>
+
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
