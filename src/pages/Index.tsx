@@ -356,6 +356,93 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">Отзывы наших клиентов</h2>
+          <p className="text-center text-muted-foreground mb-12">Более 500 довольных владельцев китайских автомобилей</p>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="border-2">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="text-xl font-bold text-accent">АМ</span>
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Александр Михайлов</CardTitle>
+                    <CardDescription>Haval Jolion, 2024</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1">
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Отличное соотношение цены и качества! Машина приехала точно в срок, все документы оформили за меня. Гарантия работает, сервис на высоте.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="text-xl font-bold text-accent">ЕС</span>
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Елена Соколова</CardTitle>
+                    <CardDescription>Exeed TXL, 2025</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1">
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Скидка в 30% от производителя — это реально! Взяли по трейд-ин, старую машину оценили честно. Очень довольны покупкой.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="text-xl font-bold text-accent">ДК</span>
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Дмитрий Козлов</CardTitle>
+                    <CardDescription>Tenet T7, 2024</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1">
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                  <Icon name="Star" size={18} className="text-accent fill-accent" />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Профессиональный подход на всех этапах. Помогли с выбором модели, доставили быстрее обещанного срока. Рекомендую всем!
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Доставка и гарантии</h2>
