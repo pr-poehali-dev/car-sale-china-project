@@ -92,6 +92,7 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [scrollY, setScrollY] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,6 +104,7 @@ const Index = () => {
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
+    setMobileMenuOpen(false);
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -120,11 +122,57 @@ const Index = () => {
               <button onClick={() => scrollToSection('offers')} className="hover:text-accent transition-colors">Спецпредложения</button>
               <button onClick={() => scrollToSection('contacts')} className="hover:text-accent transition-colors">Контакты</button>
             </div>
-            <Button variant="default" className="bg-accent hover:bg-accent/90">
-              <Icon name="Phone" size={18} className="mr-2" />
-              Позвонить
-            </Button>
+            <div className="flex items-center gap-4">
+              <Button variant="default" className="bg-accent hover:bg-accent/90 hidden sm:flex">
+                <Icon name="Phone" size={18} className="mr-2" />
+                Позвонить
+              </Button>
+              <button 
+                className="md:hidden"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
+              </button>
+            </div>
           </div>
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-3 animate-fade-in">
+              <button 
+                onClick={() => scrollToSection('hero')} 
+                className="block w-full text-left py-2 hover:text-accent transition-colors"
+              >
+                Главная
+              </button>
+              <button 
+                onClick={() => scrollToSection('catalog')} 
+                className="block w-full text-left py-2 hover:text-accent transition-colors"
+              >
+                Каталог
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')} 
+                className="block w-full text-left py-2 hover:text-accent transition-colors"
+              >
+                О компании
+              </button>
+              <button 
+                onClick={() => scrollToSection('offers')} 
+                className="block w-full text-left py-2 hover:text-accent transition-colors"
+              >
+                Спецпредложения
+              </button>
+              <button 
+                onClick={() => scrollToSection('contacts')} 
+                className="block w-full text-left py-2 hover:text-accent transition-colors"
+              >
+                Контакты
+              </button>
+              <Button variant="default" className="w-full bg-accent hover:bg-accent/90 mt-4">
+                <Icon name="Phone" size={18} className="mr-2" />
+                Позвонить
+              </Button>
+            </div>
+          )}
         </div>
       </nav>
 
